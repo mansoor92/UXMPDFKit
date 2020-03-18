@@ -179,7 +179,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = B2TH8W8JE9;
+						DevelopmentTeam = 76Y6R3NPUP;
 						LastSwiftMigration = "";
 					};
 				};
@@ -403,7 +403,7 @@
 			baseConfigurationReference = A9FF669EE8472D82692EADE4 /* Pods-UXMPDFKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B2TH8W8JE9;
+				DEVELOPMENT_TEAM = 76Y6R3NPUP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UXMPDFKit",
@@ -430,7 +430,7 @@
 			baseConfigurationReference = 20EBD11EFF06C30A3117928C /* Pods-UXMPDFKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B2TH8W8JE9;
+				DEVELOPMENT_TEAM = 76Y6R3NPUP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UXMPDFKit",

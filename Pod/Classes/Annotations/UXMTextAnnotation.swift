@@ -14,8 +14,6 @@ open class UXMTextAnnotation: NSObject, NSCoding {
     public var uuid: String = UUID().uuidString
     public var saved: Bool = false
     public weak var delegate: UXMPDFAnnotationEvent?
-	public static var font = UIFont.systemFont(ofSize: 14.0)
-    
     var text: String = "" {
         didSet {
             view.text = text
@@ -28,9 +26,9 @@ open class UXMTextAnnotation: NSObject, NSCoding {
         }
     }
     
-	var font: UIFont = UXMTextAnnotation.font {
+	var font: UIFont = UIFont.systemFont(ofSize: 16) {
         didSet {
-            view.font = UXMTextAnnotation.font
+            view.font = font
         }
     }
     
@@ -64,6 +62,8 @@ open class UXMTextAnnotation: NSObject, NSCoding {
 extension UXMTextAnnotation: UXMAnnotation {
     
     public func mutableView() -> UIView {
+//		let old = font
+//		font = old
         view = PDFTextAnnotationView(parent: self)
         return view
     }
@@ -178,11 +178,11 @@ class PDFTextAnnotationView: ResizableView, UXMPDFAnnotationView {
         }
     }
     
-    var font: UIFont = UIFont.systemFont(ofSize: 14.0) {
-        didSet {
+	var font: UIFont! {
+		didSet {
             textView.font = self.font
         }
-    }
+	}
     
     override var frame: CGRect {
         didSet {
@@ -199,7 +199,8 @@ class PDFTextAnnotationView: ResizableView, UXMPDFAnnotationView {
         self.frame = parent.rect
         self.text = parent.text
         self.font = parent.font
-        
+
+		self.textView.font = self.font
         self.textView.text = parent.text
         self.textView.delegate = parent
         self.textView.isUserInteractionEnabled = false

@@ -332,7 +332,7 @@ open class ResizableView: UIView {
     
     //MARK: Context Menu Methods
     func showMenuController() {
-        
+		guard superview != nil else {return}
         self.becomeFirstResponder()
         UIMenuController.shared.setTargetRect(self.frame, in: self.superview!)
         UIMenuController.shared.menuItems = self.menuItems
