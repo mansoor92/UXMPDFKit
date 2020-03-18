@@ -14,6 +14,7 @@ open class UXMTextAnnotation: NSObject, NSCoding {
     public var uuid: String = UUID().uuidString
     public var saved: Bool = false
     public weak var delegate: UXMPDFAnnotationEvent?
+	public static var font = UIFont.systemFont(ofSize: 14.0)
     
     var text: String = "" {
         didSet {
@@ -27,9 +28,9 @@ open class UXMTextAnnotation: NSObject, NSCoding {
         }
     }
     
-    var font: UIFont = UIFont.systemFont(ofSize: 14.0) {
+	var font: UIFont = UXMTextAnnotation.font {
         didSet {
-            view.font = self.font
+            view.font = UXMTextAnnotation.font
         }
     }
     

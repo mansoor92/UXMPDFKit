@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol UXMAnnotationControllerProtocol : class {
     func annotationWillStart(touch: UITouch) -> Int?
