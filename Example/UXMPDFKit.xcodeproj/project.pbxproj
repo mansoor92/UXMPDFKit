@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C54B5443FA784D4A4716C52 /* Pods_UXMPDFKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC69374388E5E5596A4A1B1 /* Pods_UXMPDFKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,7 +16,23 @@
 		616B61061CF7395100B743A7 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 616B61051CF7395100B743A7 /* sample2.pdf */; };
 		61CBF9411D86EB7F00282554 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 61CBF9401D86EB7F00282554 /* sample3.pdf */; };
 		61D3B3771CDE9C1600E7C3A6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3B3761CDE9C1600E7C3A6 /* ExampleViewController.swift */; };
+		8930D52924222C22000935C5 /* Pods_UXMPDFKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC69374388E5E5596A4A1B1 /* Pods_UXMPDFKit_Example.framework */; };
+		8930D52A24222C22000935C5 /* Pods_UXMPDFKit_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDC69374388E5E5596A4A1B1 /* Pods_UXMPDFKit_Example.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8930D52B24222C22000935C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8930D52A24222C22000935C5 /* Pods_UXMPDFKit_Example.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20EBD11EFF06C30A3117928C /* Pods-UXMPDFKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UXMPDFKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UXMPDFKit_Example/Pods-UXMPDFKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C54B5443FA784D4A4716C52 /* Pods_UXMPDFKit_Example.framework in Frameworks */,
+				8930D52924222C22000935C5 /* Pods_UXMPDFKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				11FEA666DA65959F0F40E4BD /* [CP] Embed Pods Frameworks */,
+				8930D52B24222C22000935C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,7 +179,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 9592M4L4J8;
+						DevelopmentTeam = B2TH8W8JE9;
 						LastSwiftMigration = "";
 					};
 				};
@@ -173,6 +189,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -386,7 +403,7 @@
 			baseConfigurationReference = A9FF669EE8472D82692EADE4 /* Pods-UXMPDFKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9592M4L4J8;
+				DEVELOPMENT_TEAM = B2TH8W8JE9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UXMPDFKit",
@@ -401,7 +418,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uxmstudio.uxmpdfit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incubasys.uxmpdfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,7 +430,7 @@
 			baseConfigurationReference = 20EBD11EFF06C30A3117928C /* Pods-UXMPDFKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9592M4L4J8;
+				DEVELOPMENT_TEAM = B2TH8W8JE9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UXMPDFKit",
@@ -428,7 +445,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uxmstudio.uxmpdfit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incubasys.uxmpdfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";

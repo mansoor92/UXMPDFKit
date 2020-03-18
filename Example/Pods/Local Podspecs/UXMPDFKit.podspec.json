@@ -12,7 +12,7 @@
     "tag": "0.8.3"
   },
   "requires_arc": true,
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "platforms": {
     "ios": "9.0"
   },
@@ -23,5 +23,6 @@
     "UXMPDFKit": [
       "Pod/Assets/**/*.{xcassets,png,json}"
     ]
-  }
+  },
+  "swift_version": "4.2"
 }
