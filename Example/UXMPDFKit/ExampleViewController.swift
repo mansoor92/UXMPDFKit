@@ -14,8 +14,14 @@ class ExampleViewController: UIViewController {
     @IBAction func loadPDF() {
 
         let url = Bundle.main.path(forResource: "sample2", ofType: "pdf")!
-        let document = try! UXMPDFDocument.from(filePath: url, fontSize: 20)
-        
+
+		let bundle = Bundle.main
+		UIFont.registerFont(withFilenameString: "nationalPro-Bold.ttf", bundle: bundle)
+		UIFont.registerFont(withFilenameString: "nationalPro-Regular.ttf", bundle: bundle)
+		UXMPDFDocument.font = UIFont(name: "MyriadPro-Bold", size: 16)
+
+        let document = try! UXMPDFDocument.from(filePath: url)
+
         let pdf = UXMPDFViewController(document: document!)
         pdf.annotationController.annotationTypes = [
             PDFHighlighterAnnotation.self,
@@ -26,6 +32,38 @@ class ExampleViewController: UIViewController {
         
         self.navigationController?.pushViewController(pdf, animated: true)
     }
+}
+
+extension UIFont {
+
+	static func registerFont(withFilenameString filenameString: String, bundle: Bundle) {
+
+		guard let pathForResourceString = bundle.path(forResource: filenameString, ofType: nil) else {
+			print("UIFont+:  Failed to register font - path for resource not found.")
+			return
+		}
+
+		guard let fontData = NSData(contentsOfFile: pathForResourceString) else {
+			print("UIFont+:  Failed to register font - font data could not be loaded.")
+			return
+		}
+
+		guard let dataProvider = CGDataProvider(data: fontData) else {
+			print("UIFont+:  Failed to register font - data provider could not be loaded.")
+			return
+		}
+
+		guard let font = CGFont(dataProvider) else {
+			print("UIFont+:  Failed to register font - font could not be loaded.")
+			return
+		}
+
+		var errorRef: Unmanaged<CFError>? = nil
+		if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == false) {
+			print("UIFont+:  Failed to register font - register graphics font failed - this font may have already been registered in the main bundle.")
+		}
+	}
+
 }
 
 
