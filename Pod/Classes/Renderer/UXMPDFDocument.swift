@@ -38,7 +38,8 @@ open class UXMPDFDocument: NSObject, NSCoding {
     open var annotationsStore: UXMAnnotationStore = UXMAnnotationStore()
 	public static var font: UIFont?
     
-	public static func from(filePath: String, password: String? = nil) throws -> UXMPDFDocument? {
+	public static func from(filePath: String, password: String? = nil, font: UIFont) throws -> UXMPDFDocument? {
+		UXMPDFDocument.font = font
         if let document = try UXMPDFDocument.unarchiveDocument(filePath: filePath, password: password) {
             return document
         }

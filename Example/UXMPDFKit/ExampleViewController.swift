@@ -19,8 +19,8 @@ class ExampleViewController: UIViewController {
 
 		let font = UIFont(name: "MyriadPro-Bold", size: 20)
         let url = Bundle.main.path(forResource: "sample2", ofType: "pdf")!
-		UXMPDFDocument.font = font
-        let document = try! UXMPDFDocument.from(filePath: url)
+//		UXMPDFDocument.font = font
+        let document = try! UXMPDFDocument.from(filePath: url, font: font!)
         
         let pdf = UXMPDFViewController(document: document!)
         pdf.annotationController.annotationTypes = [
