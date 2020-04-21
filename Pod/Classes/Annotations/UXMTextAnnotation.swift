@@ -26,11 +26,7 @@ open class UXMTextAnnotation: NSObject, NSCoding {
         }
     }
     
-	var font: UIFont = UIFont.systemFont(ofSize: 16) {
-        didSet {
-            view.font = font
-        }
-    }
+	var font: UIFont = UXMPDFDocument.font!
     
     lazy var view: PDFTextAnnotationView = PDFTextAnnotationView(parent: self)
     
@@ -48,14 +44,15 @@ open class UXMTextAnnotation: NSObject, NSCoding {
         page = aDecoder.decodeObject(forKey: "page") as? Int
         text = aDecoder.decodeObject(forKey: "text") as! String
         rect = aDecoder.decodeCGRect(forKey: "rect")
-        font = aDecoder.decodeObject(forKey: "font") as! UIFont
+        //let f = aDecoder.decodeObject(forKey: "font") as! UIFont
+		//self.font = f
     }
     
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(page, forKey: "page")
         aCoder.encode(text, forKey: "text")
         aCoder.encode(rect, forKey: "rect")
-        aCoder.encode(font, forKey: "font")
+       // aCoder.encode(font, forKey: "font")
     }
 }
 
@@ -65,6 +62,7 @@ extension UXMTextAnnotation: UXMAnnotation {
 //		let old = font
 //		font = old
         view = PDFTextAnnotationView(parent: self)
+		view.textView.font = font
         return view
     }
     
@@ -97,7 +95,7 @@ extension UXMTextAnnotation: UXMAnnotation {
         
         let attributes: [NSAttributedString.Key:AnyObject] = [
             NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
             NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]
         
@@ -178,11 +176,11 @@ class PDFTextAnnotationView: ResizableView, UXMPDFAnnotationView {
         }
     }
     
-	var font: UIFont! {
-		didSet {
-            textView.font = self.font
-        }
-	}
+//	var font: UIFont! {
+//		didSet {
+//            textView.font = self.font
+//        }
+//	}
     
     override var frame: CGRect {
         didSet {
@@ -198,13 +196,14 @@ class PDFTextAnnotationView: ResizableView, UXMPDFAnnotationView {
         self.delegate = parent
         self.frame = parent.rect
         self.text = parent.text
-        self.font = parent.font
+        //self.font = parent.font
 
-		self.textView.font = self.font
+		self.textView.font = parent.font
         self.textView.text = parent.text
         self.textView.delegate = parent
         self.textView.isUserInteractionEnabled = false
         self.textView.backgroundColor = UIColor.clear
+		self.textView.textColor = .lightGray
         
         self.backgroundColor = UIColor.clear
         

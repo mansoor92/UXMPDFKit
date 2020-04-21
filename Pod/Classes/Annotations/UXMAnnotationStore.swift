@@ -19,12 +19,23 @@ open class UXMAnnotationStore: NSObject, NSCoding {
 
     private (set) open var annotations: [UXMAnnotation] = []
     weak var delegate: UXMAnnotationStoreDelegate?
+	var font: UIFont? {
+		didSet {
+			guard let font = self.font else {return}
+			for ann in annotations {
+				(ann as? UXMTextAnnotation)?.font = font
+			}
+		}
+	}
 
     open var hasAnnotations: Bool {
         return annotations.count > 0
     }
     
     func add(annotation: UXMAnnotation) {
+		if let font = font {
+			(annotation as? UXMTextAnnotation)?.font = font
+		}
         annotations.append(annotation)
         self.delegate?.annotationStore(store: self, addedAnnotation: annotation)
     }

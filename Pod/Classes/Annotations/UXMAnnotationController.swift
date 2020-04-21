@@ -42,7 +42,7 @@ open class UXMAnnotationController: UIViewController {
     
     /// Delegate reference for annotation events
     weak var annotationDelegate: UXMAnnotationControllerProtocol?
-    
+
     /// Current annotation
     open var currentAnnotation: UXMAnnotation?
     
