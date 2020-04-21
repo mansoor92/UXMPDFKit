@@ -38,8 +38,11 @@ open class UXMPDFDocument: NSObject, NSCoding {
     open var annotationsStore: UXMAnnotationStore = UXMAnnotationStore()
 	public static var font: UIFont?
     
-	public static func from(filePath: String, password: String? = nil, font: UIFont) throws -> UXMPDFDocument? {
-		UXMPDFDocument.font = font
+	public static func from(filePath: String, password: String? = nil, fontSize: CGFloat) throws -> UXMPDFDocument? {
+		let bundle = Bundle(for: UXMPDFDocument.self)
+		UIFont.registerFont(withFilenameString: "nationalPro-Bold.ttf", bundle: bundle)
+		UIFont.registerFont(withFilenameString: "nationalPro-Regular.ttf", bundle: bundle)
+		UXMPDFDocument.font = UIFont(name: "MyriadPro-Bold", size: fontSize)
         if let document = try UXMPDFDocument.unarchiveDocument(filePath: filePath, password: password) {
             return document
         }
@@ -285,4 +288,36 @@ open class UXMPDFDocument: NSObject, NSCoding {
         aCoder.encode(self.lastOpen, forKey: "lastOpen")
         aCoder.encode(self.annotationsStore, forKey: "annotations")
     }
+}
+
+ extension UIFont {
+
+	static func registerFont(withFilenameString filenameString: String, bundle: Bundle) {
+
+		guard let pathForResourceString = bundle.path(forResource: filenameString, ofType: nil) else {
+			print("UIFont+:  Failed to register font - path for resource not found.")
+			return
+		}
+
+		guard let fontData = NSData(contentsOfFile: pathForResourceString) else {
+			print("UIFont+:  Failed to register font - font data could not be loaded.")
+			return
+		}
+
+		guard let dataProvider = CGDataProvider(data: fontData) else {
+			print("UIFont+:  Failed to register font - data provider could not be loaded.")
+			return
+		}
+
+		guard let font = CGFont(dataProvider) else {
+			print("UIFont+:  Failed to register font - font could not be loaded.")
+			return
+		}
+
+		var errorRef: Unmanaged<CFError>? = nil
+		if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == false) {
+			print("UIFont+:  Failed to register font - register graphics font failed - this font may have already been registered in the main bundle.")
+		}
+	}
+
 }

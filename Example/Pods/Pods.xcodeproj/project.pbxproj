@@ -28,6 +28,8 @@
 		75766B2ED961618DF5DC3CC83F7B6E63 /* UXMActionGoTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF46788D90A1D549B329B3FD2363A6B /* UXMActionGoTo.swift */; };
 		8793FE17276CB5814D75B04B8EE984A9 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175937B4801FAA8FFAA640152BAA95CF /* UIScreen.swift */; };
 		88592F7C750D788BD1750D3D7E0D4A1E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C501C783A92F6811721884A6CDA40A5 /* UIView.swift */; };
+		89FDBA38244EE0EB00751CBF /* nationalPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89FDBA36244EE0EB00751CBF /* nationalPro-Regular.ttf */; };
+		89FDBA39244EE0EB00751CBF /* nationalPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89FDBA37244EE0EB00751CBF /* nationalPro-Bold.ttf */; };
 		8C373FD6D694988D9FF92E47F9DA4C86 /* Pods-UXMPDFKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A2773884AADB084E043316204307E /* Pods-UXMPDFKit_Example-dummy.m */; };
 		8C7DA2A47BFC5D411AEFA119120376A1 /* UXMArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898AB7BB76F01413FD8716B7B280D34 /* UXMArray.swift */; };
 		8DF8792280105BAAA73D3AD4E099DB25 /* ResizeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D43C3D53F14A8D8AEE0482499DF789 /* ResizeableView.swift */; };
@@ -117,6 +119,8 @@
 		82E3019EFC77FDF074D3B464AB8B894D /* UXMDocumentLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UXMDocumentLink.swift; sourceTree = "<group>"; };
 		86C549EE848F4E488AE0D34E62B4CA25 /* UXMPDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UXMPDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88074737F3897559B7C3A27B166C2802 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		89FDBA36244EE0EB00751CBF /* nationalPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "nationalPro-Regular.ttf"; path = "Pod/Assets/nationalPro-Regular.ttf"; sourceTree = "<group>"; };
+		89FDBA37244EE0EB00751CBF /* nationalPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "nationalPro-Bold.ttf"; path = "Pod/Assets/nationalPro-Bold.ttf"; sourceTree = "<group>"; };
 		8BAE9A6AA99EE4748F43A462B4227483 /* UXMPDFKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UXMPDFKit-umbrella.h"; sourceTree = "<group>"; };
 		8C5A2773884AADB084E043316204307E /* Pods-UXMPDFKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UXMPDFKit_Example-dummy.m"; sourceTree = "<group>"; };
 		8C9A8991706E8C32E29C3D4B68E649EF /* UXMObjectParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UXMObjectParser.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 		9B4F6B7355A919C094B20E696024899B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				89FDBA37244EE0EB00751CBF /* nationalPro-Bold.ttf */,
+				89FDBA36244EE0EB00751CBF /* nationalPro-Regular.ttf */,
 				C940D8A4B26E4A639231867D4FA438DF /* Images.xcassets */,
 			);
 			name = Resources;
@@ -530,6 +536,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B285EE162A265F4E50A1BEF613CDB0 /* UXMPDFKit.bundle in Resources */,
+				89FDBA38244EE0EB00751CBF /* nationalPro-Regular.ttf in Resources */,
+				89FDBA39244EE0EB00751CBF /* nationalPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

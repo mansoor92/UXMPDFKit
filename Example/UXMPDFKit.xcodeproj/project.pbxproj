@@ -54,8 +54,8 @@
 		61C453CC1E5758B500A7BC7B /* ISSUE_TEMPLATE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ISSUE_TEMPLATE.md; sourceTree = "<group>"; };
 		61CBF9401D86EB7F00282554 /* sample3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample3.pdf; sourceTree = "<group>"; };
 		61D3B3761CDE9C1600E7C3A6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		89FDBA2E244ECE1900751CBF /* nationalPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nationalPro-Regular.ttf"; sourceTree = "<group>"; };
-		89FDBA2F244ECE1900751CBF /* nationalPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nationalPro-Bold.ttf"; sourceTree = "<group>"; };
+		89FDBA2E244ECE1900751CBF /* nationalPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "nationalPro-Regular.ttf"; path = "../../nationalPro-Regular.ttf"; sourceTree = "<group>"; };
+		89FDBA2F244ECE1900751CBF /* nationalPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "nationalPro-Bold.ttf"; path = "../../nationalPro-Bold.ttf"; sourceTree = "<group>"; };
 		A9FF669EE8472D82692EADE4 /* Pods-UXMPDFKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UXMPDFKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UXMPDFKit_Example/Pods-UXMPDFKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B04CB08B51CFCD484BF776 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EDC69374388E5E5596A4A1B1 /* Pods_UXMPDFKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UXMPDFKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "UXMPDFKit"
-  s.version          = "0.8.7"
+  s.version          = "0.8.8"
   s.summary          = "A fully functioning PDF reader written completely in Swift"
 
   s.homepage         = "https://github.com/diegostamigni/UXMPDFKit"
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.ios.source_files = 'Pod/Classes/**/*'
 
   s.resource_bundles = {
-    'UXMPDFKit' => ['Pod/Assets/**/*.{xcassets,png,json}']
+    'UXMPDFKit' => ['Pod/Assets/**/*.{xcassets,png,json,ttf}']
   }
 end
